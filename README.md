@@ -5,8 +5,6 @@ This code was created with the purpose of sniff OpenVPN server logs, sending Tel
 
 ## :gear: Setup
 
-### Clone
-
 Open terminal, change your current working directory to the location where you want the cloned directory and then clone this repository to your local machine
 
 ```
@@ -22,13 +20,32 @@ sudo ./install.sh
 ```
 
 When the installation finishes, edit `/etc/openvpn-notify/config.conf` config file (open as sudo) and write your Telegram bot `token` and `chat_id`.
-After this, restart systemd service
+
+```
+BOT_TOKEN="your_bot_token_here"
+CHAT_ID="your_chat_id_here"
+```
+
+After setting up config file, restart systemd service to apply changes
 
 ```
 sudo systemctl restart openvpn-notify.service
 ```
 
-Now, you are ready to rock :sunglasses:\
+Now, you are ready to rock :sunglasses:
+
+To check service status run
+
+```
+sudo systemctl status openvpn-notify.service
+```
+
+To check service logs run
+
+```
+sudo journalctl -t openvpn-notify -f
+
+```
 
 ## :balance_scale: License
 
