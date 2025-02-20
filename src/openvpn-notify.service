@@ -1,0 +1,16 @@
+[Unit]
+Description=OpenVPN Connection Notify
+After=openvpn.service openvpn-server@server.service
+Wants=openvpn.service openvpn-server@server.service
+
+[Service]
+ExecStart=/usr/local/bin/openvpn-notify.sh
+Restart=always
+RestartSec=30
+User=root
+Group=root
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
