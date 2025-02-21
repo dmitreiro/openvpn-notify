@@ -1,5 +1,5 @@
 # openvpn-notify
-This code was created with the purpose of sniff OpenVPN server logs, sending Telegram notifications as soon as a client successfully connects to a server.
+This service sniffs OpenVPN server logs to monitor when a client successfully connects to the server and sends Telegram real-time notifications about the client's name and IP address.
 
 ***
 
