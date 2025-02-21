@@ -5,6 +5,8 @@ This code was created with the purpose of sniff OpenVPN server logs, sending Tel
 
 ## :gear: Setup
 
+:warning: **Warning**: before you proceed, make sure your Linux OS uses `systemd` as a service manager.
+
 Open terminal, change your current working directory to the location where you want the cloned directory and then clone this repository to your local machine
 
 ```
